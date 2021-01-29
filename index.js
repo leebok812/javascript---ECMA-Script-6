@@ -180,3 +180,31 @@ console.log("5번"+exam.total());
 }
 
 //////////////////////////////////////////////////////////////////////////////
+///////////8. Object Destructuring #2 - 속성 확장과 기본값/////////////////////////
+
+{
+
+    let exam = {
+        kor:20,
+        eng:30,
+        math:50
+    
+    };
+
+    let{   kor, eng  ,math ,total = kor+eng+math  } = exam;
+    //비슷한 느낌 select kor, eng,math, kor+eng+math as total from exam;
+    console.log(`8번 뽀개기 적용전 kor: ${kor}, eng: ${eng},math:${math},total:${total}`);
+    
+    
+    exam.kor = 100; // 위 let exam 은 지역 변수로 되어 이 값을 넣어주려면 재 설정해줘야한다.
+    exam.math = 70; // 위 let exam 은 지역 변수로 되어 이 값을 넣어주려면 재 설정해줘야한다.
+    
+
+    // kor = exam.kor;
+    // math = exam.math;
+    // total = exam.kor+exam.eng+exam.math; 
+    ({kor,math,total = kor+eng+math }=exam); // 위 3개를 뽀갬
+
+    console.log(`8번 뽀개기 적용후 kor: ${kor}, eng: ${eng},math:${math},total:${total}`);
+
+}
