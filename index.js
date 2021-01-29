@@ -153,3 +153,30 @@ console.log("5번"+exam.total());
 
 
 }
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////////7. Object Destructuring #1- 객체 뽀개기////////////////
+
+{
+
+    let exam = {
+        kor:20,
+        eng:30,
+        math:40
+    };
+
+    function print({kor, eng, math}){
+
+       // let kor = exam.kor;
+       // let eng = exam.eng;
+       // let {kor, eng} = exam; // 위에 두개를 뽀개서 만듬
+
+        //최종본은 아예 function 에 넣어버림.
+
+       //첫번째 표현법 console.log(`7번 kor: ${exam.kor}, eng:${exam.eng}`);
+        console.log(`7번 kor:${kor},eng:${eng},math:${math}`);
+    }
+    print(exam);
+
+}
+
+//////////////////////////////////////////////////////////////////////////////
