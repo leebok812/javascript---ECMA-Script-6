@@ -12,10 +12,10 @@ console.log(x);
 */
 {
 let x = 30;
-console.log(x);
+console.log("1번"+x);
 
 let y = 20;
-console.log(y);
+console.log("1번"+y);
 
 }
 }
@@ -32,7 +32,7 @@ console.log(y);
 
 }
 
-console.log(a);  //<= 안 나와야하는데 var로 해서 나옴 
+console.log("2번"+a);  //<= 안 나와야하는데 var로 해서 나옴 
 
 
 {
@@ -61,7 +61,7 @@ function getValue(condition){
         return value;
     }
 }
-console.log(getValue(false));// => undefined가 나오는데 이 뜻은 선언됐다는 말이다 원래는 에러가 나야함(let value로 할경우는 에러가난다.)
+console.log("2번"+getValue(false));// => undefined가 나오는데 이 뜻은 선언됐다는 말이다 원래는 에러가 나야함(let value로 할경우는 에러가난다.)
 // var로 표현되서 어느 곳에 깊게 숨겨놔도 전역처럼 범위를 끼치는것.
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +81,7 @@ console.log(getValue(false));// => undefined가 나오는데 이 뜻은 선언�
 
     // add=3;// Assignment to constant variable.  위와 같은 예 상수는 불변값이므로 값을 넣을수 없다.
 
-     console.log(add(3,4)); 
+     console.log("3번"+add(3,4)); 
 
 }
 
@@ -104,7 +104,7 @@ console.log(getValue(false));// => undefined가 나오는데 이 뜻은 선언�
                          <h1>${title}\n\n\n</h1> 
                          <p>${content}</p> 
                         </section>`;
-            console.log(template);
+            console.log("4번"+template);
 
 
 }
@@ -124,8 +124,29 @@ console.log(getValue(false));// => undefined가 나오는데 이 뜻은 선언�
 let exam = {kor,eng,math, total(){
     return 10;
 }};
-console.log(exam.kor);
-console.log(exam.total());
+console.log("5번"+exam.kor);
+console.log("5번"+exam.total());
+
+
+
+
+
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////// 6. 향상된 JSON 객체 표현식 #2 : 변수형 속성//////////////////
+
+{
+     let attr = "kor";
+    let  exam ={
+        //attr:10 undifined;
+        [attr]:10
+
+    };
+
+        console.log("6번"+exam.kor);
+
 
 
 
