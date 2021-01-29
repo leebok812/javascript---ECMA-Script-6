@@ -290,3 +290,50 @@ console.log("5번"+exam.total());
 
 
 /////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////11. Array Destructuring #2///////////////////////////////
+
+
+{
+
+    //1.
+    let kors = [10,20,30];
+    let [kor1, kor2, kor3, kor4=40] = kors; //배열에 kor4처럼 값을 넣고 추가할수 있다. 
+    console.log("11번"+kor4)
+
+    //2.
+    let exam = [10,20,30,[40,50]];
+    let [kor, eng,math,[com,history]]= exam; // 위의 대괄호중첩처럼 묶어줘서 값을 뺄수 있다.
+    console.log("11번"+com);
+
+
+    //3. 
+
+    let notice = {
+        title:"공지사항",
+        files:["img1.png","img2.png"]
+    
+    };
+        let {files:[first]}= notice; //img1.png 뽑음 |first라고 별칭을 준것임
+        console.log(first);
+
+    //4. 
+    let notices = {
+        title:"공지사항",
+        list:[
+        {title:"오~", content: "내용무"},
+        {title:"하~", content:"ㅋㅋ"}
+        ]
+    };
+    let{list:[one]}=notices; //one이라고 별칭을 준것임
+    console.log("11번"+one.title); //list의 첫번째 title을 뽑음 | one이라고 별칭을 준것임
+    let{list:[,two]}=notices; //two라고 별칭을 준것임
+    console.log( two); //list의 두번째 전체를 뽑음 //two라고 별칭을 준것임
+    console.log("---------------");
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
