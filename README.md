@@ -10,3 +10,4 @@
 4. Template String : 백틱(backtick)-어금부호 ` 숫자1번 옆에 있음 +String.raw
 5. 향상된 JSON 객체 표현식 #1
 6. 향상된 JSON 객체 표현식 #2 : 변수형 속성
+7. Object Destructuring #1 - 객체 뽀개기
