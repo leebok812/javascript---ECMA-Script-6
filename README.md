@@ -12,3 +12,4 @@
 6. 향상된 JSON 객체 표현식 #2 : 변수형 속성
 7. Object Destructuring #1 - 객체 뽀개기
 8. Object Destructuring #2 - 속성 확장과 기본값
+9. Object Destructuring #3 - 중첩과 적응
