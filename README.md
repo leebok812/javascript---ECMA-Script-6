@@ -14,3 +14,4 @@
 8. Object Destructuring #2 - 속성 확장과 기본값
 9. Object Destructuring #3 - 중첩과 적응
 10. Array Destructuring #1
+11. Array Destructuring #2
