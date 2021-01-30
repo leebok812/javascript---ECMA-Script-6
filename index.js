@@ -337,3 +337,102 @@ console.log("5번"+exam.total());
 
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////12. Set 콜렉션 //////////////////////////////////////////////
+
+
+{
+
+    //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set 참고
+
+    {
+    //ex1. 
+    let set = new Set();
+
+    /*
+    set.add(5); // 숫자
+    set.add("5"); //문자 중복되면 안됨!
+    set.add(2);
+    set.add(5); // 위에서 숫자 5를 넣었기에 이건 안들어감.
+    */
+
+    // 위와 같은 더 쉬운 표현법
+    set.add(5).add("5").add(2).add(5);
+
+    console.log("12번 : "+set.size); // 맨 마지막 5가 안들어간것을 확인해볼수있다 그러므로 set.size = 3
+    }
+
+    {
+    //ex2.
+    let set = new Set([2,4,3,5,6,4,3]);
+    console.log("12번 : "+set.size); // 중복값을 빼고 출력하면 5가 나옴.
+    }
+
+    {
+    //ex3.
+    let ar = [1,2,3,2,3,4,3,4,5];
+    let set = new Set(ar);
+    console.log("12번 : "+set.size);// 중복값을 빼고 출력하면 5가 나옴.
+
+    }
+
+
+    {
+    //ex4.값 나열하기
+    let set = new Set([2,10,7,45,23]);
+
+    //1번 방법
+    set.forEach(function(value,key,ownerSet){
+        console.log("12번 : "+key+":"+value);
+    });
+
+    console.log("===========================");
+
+    //2번 방법 - for-of를 이용한 값 나열 (새로등장 코드량이 더 적고 좋다~)
+    for(let v of set){ // v로 별칭(명명)한것.
+        console.log("12번 : "+v);
+    }
+    //2번 방법의 응용 - 1번 처럼 키와 값 나오게 하기
+    for(let [key, value] of set.entries()){ // v로 별칭(명명)한것.
+        console.log("12번 : "+key+":"+value);
+    }
+
+    
+    }
+
+    {
+    //ex5. 값 확인하기
+    let set = new Set();
+    set.add(5);
+    set.add("5");
+    console.log("12번 값 확인 : "+set.has(5)); //true
+    console.log("12번 값 확인 : "+set.has(6)); //false
+
+    }
+
+    {
+    //ex6. 값 삭제하기
+    let set = new Set();
+    set.add(5);
+    set.add("5");
+    console.log("12번 삭제 전 : "+set.size);    //2
+
+    set.delete(5);
+    console.log("12번 5 삭제 후 : "+set.size); //1
+
+    set.add(6);
+    console.log("12번 6 삽입 후 : "+set.size); //2
+
+    set.clear(); // 모두 삭제 
+    console.log("12번 clear 후 : "+set.size); //0
+
+
+
+    }
+
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
