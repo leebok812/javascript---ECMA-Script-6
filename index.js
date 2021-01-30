@@ -1,23 +1,35 @@
 
 /////// 1.let 키워드 :변수 선언이 무의미한 문제  (var vs let)///////////////
 {
-/* 
-var 는 더이상 쓰지 말자!
- 중복되도 오류가 안남 나중에 문제 발생할수도 있기 때문
+ 
+        //var 는 더이상 쓰지 말자!
+        //중복되도 오류가 안남 | 나중에 문제 발생할수도 있기 때문
+    {
+        var x = 30;
+        console.log("1번 var : "+x); 
 
-var x = 30;
-console.log(x); 
+        console.log("=======구분선=======")
+
+        var x = 30; // 중복 오류 없이 그대로 내보낸다. 
+        console.log("1번 var : "+x); 
+
+        console.log("====================")
+    }
+    
+    
+    {
+        let x = 40;
+        console.log("1번 let : "+x);
+
+        console.log("=======구분선=======")
+
+        let y = 20; // let으로 이렇게 할 경우 중복 문제를 잡아준다.
+                  //index.js:21 Uncaught SyntaxError: Identifier 'x' has already been declared
+        console.log("1번 let : "+y);
 
 
-*/
-{
-let x = 30;
-console.log("1번"+x);
-
-let y = 20;
-console.log("1번"+y);
-
-}
+        console.log("====================")
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////
 
