@@ -35,48 +35,64 @@
 
 
 
+
+
 //////////////// 2.let 키워드 : 이젠 지역변수가 생겼다.//////////////////////////////
 {
-////ex1)//////
-{
-
- var  a = 30;
-
-}
-
-console.log("2번"+a);  //<= 안 나와야하는데 var로 해서 나옴 
 
 
-{
-
-    let b = 30;
-
-}
-//console.log(b); //하지만 let으로 하면 지역화되서 안됨
-
-
-
-//////////////////
-
-////ex2)
-function getValue(condition){
-
-    if(condition){
+        //ex1.
         {
-            {
-        var value ="ok";
-            }
-        } 
-        return value;
 
-    }else{
-        return value;
-    }
-}
-console.log("2번"+getValue(false));// => undefined가 나오는데 이 뜻은 선언됐다는 말이다 원래는 에러가 나야함(let value로 할경우는 에러가난다.)
-// var로 표현되서 어느 곳에 깊게 숨겨놔도 전역처럼 범위를 끼치는것.
+           var  a = 30;
+
+        }
+
+        console.log("2번 var로 할 경우 : "+a);  //<= 안 나와야하는데 var로 해서 나옴 
+
+       
+        console.log("=======구분선=======")
+
+
+        {
+
+            let b = 30;
+
+        }
+        console.log("2번 let으로 할 경우 : "+b); //하지만 let으로 하면 지역화되서 안됨 오류발생!
+
+        console.log("====================")
+
+
+//////////////////////
+
+                //ex2.
+        function getValue(condition){
+
+            if(condition){
+                {
+                    {
+                var value ="ok";
+                    }
+                } 
+                return value;
+
+            }else{
+                return value;
+            }
+        }
+        console.log("2번 "+getValue(false));// => undefined가 나오는데 이 뜻은 선언됐다는 말이다 
+        //원래는 에러가 나야함(let value로 할경우는 에러가난다.)
+        // var로 표현되서 어느 곳에 깊게 숨겨놔도 전역처럼 범위를 끼치는것.
+
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 
 ///////////////////////////////3. const 변수 /////////////////////////////////////
 {
