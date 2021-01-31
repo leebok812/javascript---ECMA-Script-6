@@ -59,7 +59,7 @@
             let b = 30;
 
         }
-        console.log("2번 let으로 할 경우 : "+b); //하지만 let으로 하면 지역화되서 안됨 오류발생!
+        //console.log("2번 let으로 할 경우 : "+b); //하지만 let으로 하면 지역화되서 안됨 오류발생!
 
         console.log("====================")
 
@@ -458,6 +458,68 @@ console.log("5번"+exam.total());
 
 
     }
+
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////13.  Map 콜렉션////////////////////////////////////////////////////
+
+
+
+{
+
+ //ex1.
+        { 
+        let map  = new Map();
+        map.set("id",1); //map의 특징적인 부분 : 값하고 키 두개가 한번에 저장된다. 
+        console.log("13번 : " +map.size);
+        console.log("--------------------------------");
+        map.set("title","map이란?");
+        console.log("13번 : " +map.size);
+        console.log("--------------------------------");
+        console.log("13번 : " +map.get("title"))
+        }
+
+
+//ex2.
+        {
+
+        //1번 표현법
+       /*  let exam = new Map();
+
+            exam.set("kor",10);
+            exam.set("eng",10);
+            exam.set("math",10); */
+       
+            //2번 표현법
+        let exam = new Map([["kor",10],["eng",10],["math",10],[4,"kor"]]);
+
+            //exam.set("kor",10);
+            //exam.set("eng",10);
+            //exam.set("math",10);
+
+            console.log("--------------------------------");
+
+            //1번 표현법
+            for(let [k,v] of exam){ // [k(키),v(값)] k와v 라고 명칭을 붙인것.
+                console.log(typeof k); // ["kor",10] -> String [4,"kor"] -> number
+                console.log("13번 : " +`${k}:${v}`);
+            }
+            console.log("--------------------------------");
+            //2번 표현법
+            for(let [k,v] of exam.entries()){ // [k(키),v(값)] k와v 라고 명칭을 붙인것.
+                console.log(typeof k); // ["kor",10] -> String [4,"kor"] -> number
+                console.log("13번 : " +`${k}:${v}`);
+            }
+   
+   
+         }   
+
+
 
 
 }
