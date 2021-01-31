@@ -501,7 +501,8 @@ console.log("5번"+exam.total());
             //exam.set("kor",10);
             //exam.set("eng",10);
             //exam.set("math",10);
-
+            
+            
             console.log("--------------------------------");
 
             //1번 표현법
