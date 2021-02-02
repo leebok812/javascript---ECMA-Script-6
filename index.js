@@ -565,7 +565,7 @@ console.log("5번"+exam.total());
 
 
 ///////////////////////15. Spread Operator////////////////////////////////////////////////////
-
+{
 console.log("============15번=========");
 
 {
@@ -609,5 +609,127 @@ console.log("============15번=========");
 
 
 console.log("============15번=========");
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////16. Default Value의 이전방식과 현재방식 ////////////////////////////////////////
+
+{
+    console.log("==========================16번=============================")
+
+    //ex1. 기본 값이 없던 함수 
+    {
+        function add(x,y){
+
+            x =  x || 0;
+            y =  y || 0;
+
+            return x+y;
+
+        }
+
+        console.log(add(2,3));
+        console.log(add(1));
+
+    }
+
+    //ex.2 1번에서 발전
+    {
+        function add(x=0,y=0){
+            return x +y;
+        }
+
+
+    }
+
+
+
+        //ex3.
+        {
+            console.log( true || false); // true
+
+            console.log( 5 || 2); //5
+
+            console.log( false || true); // true
+
+            console.log( null || 2);  //2   두번째값
+    
+            console.log( 1 || 2);  //1
+           
+            console.log( true || 2);  // true
+            
+            console.log( undefined || 2);  // 2 두번째값
+            
+            console.log( "" || 2);  // 2 두번째값
+            
+            console.log( "" || null);  // null 두번째값
+            
+            console.log( "" || null || 5);  // 5 -> 파이프 연산 같은 역할을 함 값이 나올때까지 쭉~
+
+
+
+
+        }
+
+        //ex3. 기본값을 중간에 사용하는 경우에서 기본 값을 사용 하는 방법
+            {
+                function add(x, y=10, z){
+                    console.log(x + "," + y + ","+z);
+
+                }
+                console.log(add(10, null,30));
+                console.log(add(10,undefined,30));
+
+
+
+            }
+
+
+            //ex4. 전달되지 않은 기본값은 arguments 개수에 잡힐까?
+            {
+                function add(x, y=10){
+
+                    console.log(arguments.length);
+                    console.log(x+ ","+y);
+
+
+                }
+                add(10);
+                add(10,30)
+                add(undefined);
+
+
+
+            }
+
+
+            //ex4의 다른 예
+            {
+                function print(x, y=10, z=20){
+
+                    console.log(`x:${x},y:${y},z:${z}`);
+                    console.log(arguments.length);
+
+
+                }
+
+                print(2); // 이때의 arguments.length는 1
+                print(2,3); // 이때의 arguments.length는 2
+
+
+
+
+            }
+
+
+
+
+
+    console.log("==========================16번=============================")
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
