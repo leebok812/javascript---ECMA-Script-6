@@ -733,3 +733,114 @@ console.log("============15번=========");
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////17. Arrow Functions과 그 특징 ///////////////////////////////////
+
+{
+
+    //1. 이전방식
+    {
+        window.addEventListener("load", function (){
+
+
+            alert("로드 완료");
+
+        });
+
+
+    }
+
+    //1-1. 이전방식
+    {
+
+            function print(){
+
+                this.kor = 10;
+                console.log("print:"+this.kor);
+                console.log("print:"+window.kor); //위와 같은 값 나옴
+
+
+            }
+
+            function Exam(){
+                this.kor = 0;
+                this.eng = 0;
+                this.math = 0;
+
+
+            }
+
+            print();
+            let exam = new Exam();
+            console.log(exam.kor);
+            console.log(kor); //function print 중 widow.kor 값 10이 출력된다. 전역이라는 뜻
+    }
+
+
+    //2. Arrow function 사용 
+    {
+        window.addEventListener("load", ()=>{
+
+            alert("로드 완료");
+
+        });
+
+
+
+
+    }
+
+    //3. 함수를 즉석에서 정의해서 넘기는 경우가 많다.
+    {
+        let nums =[13,4,6,1,3,26];
+
+        nums.sort();
+        console.log(nums);
+
+        //위 구문을 Arorow function을 활용해서 적어보자면
+
+        nums.sort((x,y)=>x-y);
+        console.log(nums);
+
+
+
+
+
+    }
+
+
+            //4. 변수 두 개 이상 가지는 경우
+                    {
+
+                        var func1 = function(x,y){
+
+                            return x+y;
+
+                        }
+
+
+                        //  위 구문을 Arrow function을 하자면
+
+                        var func1 = (x,y)=>{
+                            return x+y;
+                        }
+                            func1(2,3);
+                            //위 구문을 간소화 하자면
+                            
+                            var func1 = (x,y)=> x+y;
+                            func1(2,3);
+
+
+
+                    }
+
+
+
+
+
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
