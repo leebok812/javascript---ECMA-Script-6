@@ -21,6 +21,7 @@
 15. Spread Operator
 16. Default Value의 이전방식과 현재방식
 17. Arrow Functions과 그 특징
+18. class를 이용한 객체 정의
 
 
 
