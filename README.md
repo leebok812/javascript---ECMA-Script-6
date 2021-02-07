@@ -23,6 +23,7 @@
 17. Arrow Functions과 그 특징
 18. class를 이용한 객체 정의
 19. class 멤버 은닉하기
+20. static 멤버 정의하기
 
 
 
