@@ -868,7 +868,7 @@ console.log("============15번=========");
                     return this.total()/3.0;
             }
 
-            //기존 함수로 저으이하던 방법과의 차이점
+            //기존 함수로 정의하던 방법과의 차이점
 
             //1. class 블록 안의 코드는 strict 모드로 실행된다.
             //2. class 블록 안의 모든 메소드는 열거할 수 없다.
@@ -915,7 +915,7 @@ console.log("============15번=========");
                     return this.#total()/3.0;
             }
 
-            //기존 함수로 저으이하던 방법과의 차이점
+            //기존 함수로 정의하던 방법과의 차이점
 
             //1. class 블록 안의 코드는 strict 모드로 실행된다.
             //2. class 블록 안의 모든 메소드는 열거할 수 없다.
@@ -987,21 +987,13 @@ console.log("============15번=========");
 
             }
 
-            //기존 함수로 저으이하던 방법과의 차이점
-
-            //1. class 블록 안의 코드는 strict 모드로 실행된다.
-            //2. class 블록 안의 모든 메소드는 열거할 수 없다.
-            //3. class 생성자는 new를 통하지 않고는 호출할 수 없다. 
-
         }
 
-                //이렇게 객체를 3개 만들면 국,영,수 값을 다 다르게 담을 수 있다. 
+              
            let exam1 = new Exam();
-        //    let exam2 = new Exam(11,22,33);
-        //    let exam3 = new Exam(15,25,35);
-        //       console.log(exam1.avg());
+    
               console.log(Exam.info());
-              //console.log(exam.kor);// 위에서 kor을 private처리 해서 undefined 가 나옴
+          
 
 
 
